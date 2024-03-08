@@ -30,11 +30,23 @@
 
         }
         myTest0();
+
         echo"<h2>Operátorok</h2>";
-        $adat1=8/3;
-        echo "8/3 eredménye: $adat1<br>";
+        $adat1=8/3; //valódi osztás
+        echo "8/3 eredménye(ez egy valósi osztás a '/' jelel): $adat1<br>";
         echo "8/3 adatípusa: " .gettype($adat1). "<br>";
 
+        echo"<h2>Elágazások</h2>";
+        $logikai = (5 == 0);
+        echo "5 egyenlő 0-val? <br>";
+        echo ($logikai ? 'Ez igaz.' : 'Ez hamis.'); //ternélis operátorok változó ? 'ha igaz.' : 'ha hamis.'
+
+        if ($logikai){ // ez ugyan ezt jelenti csak rövidebb formában(termélisan): echo ($logikai ? 'Ez igaz.' : 'Ez hamis.');
+            echo 'ez igaz';
+        }
+        else{
+            echo 'ez hamis';
+        }
 
     ?>
 </body>
