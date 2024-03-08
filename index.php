@@ -73,6 +73,52 @@
         foreach($asszTomb as $kulcs => $ertek){
             echo "$kulcs: $ertek <br>";
         }
+        echo"<br>";
+    ?>
+
+    <?php
+    echo "1.Hozz létre egy 5 elemű tömböt véletlen számokkal (20 és 30 közötti zárt intervallumban), majd írasd ki az összegüket!";
+    $tomb =array();
+    $osszeg=0;
+    for ($i=0; $i<5; $i++){
+        $randomSzam=rand(20,30);
+        $tomb [] = $randomSzam;
+        $osszeg += $randomSzam;
+    }
+   
+    //kiíratás
+    echo "Tömb elmei <br>";
+    foreach ($tomb as $value){
+        echo $value." ";
+    }
+    echo "<br>";
+
+     echo"2.Adott egy 3 elemű tömb véletlen érdemjegyekkel korábban feltöltve, majd írasd ki az érdemjegyekhez tartozó szöveges értelmezést (pl. 3: közepes) <br>";
+     $tomb2=array();
+     $randomSzam2=0;
+     $asszTomb=array();
+     for ($i=0; $i<3; $i++){
+        $randomSzam2=rand(1,5);
+        if ($randomSzam2=1){
+            $asszTomb=array("elégtelen"=>$randomSzam2);
+        }
+        elseif($randomSzam2=2){
+            $asszTomb=array("elégséges"=>$randomSzam2);
+        }
+        elseif($randomSzam2=3){
+            $asszTomb=array("közepes"=>$randomSzam2);
+        }
+        elseif($randomSzam2=4){
+            $asszTomb=array("jó"=>$randomSzam2);
+        }
+        elseif($randomSzam2=5){
+            $asszTomb=array("példás"=>$randomSzam2);
+        }
+        $tomb [] = $randomSzam2;
+     }
+     foreach($tomb as $kulcs => $ertek){
+        echo $kulcs. ":" .$ertek. "<br>";
+     }
     ?>
 </body>
 </html>
