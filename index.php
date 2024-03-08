@@ -61,6 +61,18 @@
                 echo "A szám pozitív<br>";
                 break;
         }
+
+        echo"<h2>Ciklusok</h2>";
+        $tomb = array(1,3,4);
+        //foreach sima tömbbel
+        foreach($tomb as $ertek){
+            echo $ertek.'<br>';
+        }
+        $asszTomb=array("Szandi" =>10, "István"=>20);
+        //foreach asszocativ tömbbel
+        foreach($asszTomb as $kulcs => $ertek){
+            echo "$kulcs: $ertek <br>";
+        }
     ?>
 </body>
 </html>
