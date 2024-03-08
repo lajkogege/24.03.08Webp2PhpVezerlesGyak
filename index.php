@@ -39,15 +39,28 @@
         echo"<h2>Elágazások</h2>";
         $logikai = (5 == 0);
         echo "5 egyenlő 0-val? <br>";
-        echo ($logikai ? 'Ez igaz.' : 'Ez hamis.'); //ternélis operátorok változó ? 'ha igaz.' : 'ha hamis.'
+        echo ($logikai ? 'Ez igaz.<br>' : 'Ez hamis.<br>'); //ternélis operátorok változó ? 'ha igaz.' : 'ha hamis.'
 
         if ($logikai){ // ez ugyan ezt jelenti csak rövidebb formában(termélisan): echo ($logikai ? 'Ez igaz.' : 'Ez hamis.');
-            echo 'ez igaz';
+            echo 'ez igaz <br>';
         }
         else{
-            echo 'ez hamis';
+            echo 'ez hamis <br>';
         }
 
+        $szam=rand(-1,1);
+        echo "A véletlen szám: $szam <br>";
+        switch ($szam) {
+            case -1:
+                echo "A szám negatív<br>";
+                break;
+            case 0:
+                echo "A szám nulla<br>";
+                break;
+            default:
+                echo "A szám pozitív<br>";
+                break;
+        }
     ?>
 </body>
 </html>
