@@ -29,8 +29,11 @@
             echo "A (globális változók) " . $GLOBALS['x'].   "és a " . $GLOBALS['y']." összege: ".$GLOBALS['z'];
 
         }
-         myTest0();
-
+        myTest0();
+        echo"<h2>Operátorok</h2>";
+        $adat1=8/3;
+        echo "8/3 eredménye: $adat1<br>";
+        echo "8/3 adatípusa: " .gettype($adat1). "<br>";
 
 
     ?>
