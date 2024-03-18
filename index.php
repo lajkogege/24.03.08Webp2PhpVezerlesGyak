@@ -93,32 +93,33 @@
     }
     echo "<br>";
 
-     echo"2.Adott egy 3 elemű tömb véletlen érdemjegyekkel korábban feltöltve, majd írasd ki az érdemjegyekhez tartozó szöveges értelmezést (pl. 3: közepes) <br>";
-     $tomb2=array();
-     $randomSzam2=0;
-     $asszTomb=array();
-     for ($i=0; $i<3; $i++){
-        $randomSzam2=rand(1,5);
-        if ($randomSzam2=1){
-            $asszTomb=array("elégtelen"=>$randomSzam2);
+    echo "2. Adott egy 3 elemű tömb véletlen érdemjegyekkel korábban feltöltve, majd írasd ki az érdemjegyekhez tartozó szöveges értelmezést (pl. 3: közepes) <br>";
+    $tomb2 = array();
+    $randomSzam2 = 0;
+    for ($i = 0; $i < 3; $i++) { // $i=1-ről $i=0-ra változtatva, hogy nulláról induljon az index
+        $randomSzam2 = rand(1, 5);
+        $tomb2[] = $randomSzam2; // Érdemjegy hozzáadása a tömbhöz
+        switch ($randomSzam2) {
+            case 1:
+                echo $randomSzam2 . ": elégtelen <br>";
+                break;
+            case 2:
+                echo $randomSzam2 . ": elégséges <br>";
+                break;
+            case 3:
+                echo $randomSzam2 . ": közepes <br>";
+                break;
+            case 4:
+                echo $randomSzam2 . ": jó <br>";
+                break;
+            case 5:
+                echo $randomSzam2 . ": kiváló <br>";
+                break;
+            default:
+                echo "Nem érvényes érdemjegy <br>";
+                break;
         }
-        elseif($randomSzam2=2){
-            $asszTomb=array("elégséges"=>$randomSzam2);
-        }
-        elseif($randomSzam2=3){
-            $asszTomb=array("közepes"=>$randomSzam2);
-        }
-        elseif($randomSzam2=4){
-            $asszTomb=array("jó"=>$randomSzam2);
-        }
-        elseif($randomSzam2=5){
-            $asszTomb=array("példás"=>$randomSzam2);
-        }
-        $tomb [] = $randomSzam2;
-     }
-     foreach($tomb as $kulcs => $ertek){
-        echo $kulcs. ":" .$ertek. "<br>";
-     }
+    }
     ?>
 </body>
 </html>
