@@ -120,6 +120,29 @@
                 break;
         }
     }
+
+echo "<h2>Sakk tábla</h2>";
+$meret = 8;
+echo "<table>";
+echo "<tr><th></th>"; 
+for ($j = 0; $j < $meret; $j++) {
+    echo "<th>" . chr(97 + $j) . "</th>"; 
+}
+echo "</tr>";
+
+for ($i = 0; $i < $meret; $i++) {
+    echo "<tr>";
+    echo "<td>" . ($i + 1) . "</td>"; 
+    for ($j = 0; $j < $meret; $j++) {
+        if (($i + $j) % 2 == 0) {
+            echo "<td style='background-color: white; width: 50px; height: 50px;'></td>";
+        } else {
+            echo "<td style='background-color: black; width: 50px; height: 50px;'></td>";
+        }
+    }
+    echo "</tr>";
+}
+echo "</table>";
     ?>
 </body>
 </html>
