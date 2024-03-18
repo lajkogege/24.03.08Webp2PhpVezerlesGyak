@@ -143,6 +143,23 @@ for ($i = 0; $i < $meret; $i++) {
     echo "</tr>";
 }
 echo "</table>";
+
+//4.feladat:
+echo"";
+echo "<h2>4.feladat</h2>";
+$darabSzam=10;
+$fejekSzama=0;
+
+$FejIras=array();
+for ($i=0; $i < $darabSzam; $i++) { 
+    $fej=(bool)rand(0,1);
+    $FejIras[]=$fej;
+    if ($fej) {
+      $fejekSzama++;
+    }
+}
+
+echo"Az összes dobás során a fejek száma: $fejekSzama";
     ?>
 </body>
 </html>
